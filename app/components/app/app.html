@@ -1,0 +1,24 @@
+<div>
+	<h1>Hello this is {{ name }}</h1>
+	<div>
+		<p>
+		<a href='{{prefix}}{{url}}'>Link</a>
+		<div>
+			<ul>
+     <li *ng-for="#val of allValues">
+        {{ val }}
+     </li>
+  </ul>
+		</div>
+		<div>
+		<select #ctrl [value]="selectedValue" (change)='select(ctrl.options[ctrl.selectedIndex].value)'>
+			<!--<option *ng-for="#val of allValues" [value]="val">{{val}}</option>-->
+			<option value='first'>first</option>
+			<option value='second'>second</option>
+			<option value='third'>third</option>
+		</select>
+		</p>
+		<p><a>Selected value is {{selectedValue}}</a></p>
+		</div>
+	</div>
+</div>
